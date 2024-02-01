@@ -1,5 +1,4 @@
 import { Module } from '@nestjs/common';
-import { ProductsModule } from './product/product.module';
 import { ConfigModule } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 import { StudentsModule } from './student/student.module';
@@ -11,7 +10,6 @@ import { StudentsModule } from './student/student.module';
       isGlobal: true,
     }),
     MongooseModule.forRoot(process.env.DATABASE_URL),
-    // ProductsModule,
     StudentsModule,
   ],
   controllers: [],
